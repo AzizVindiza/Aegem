@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  resize: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background: #0f0f0f;
+  font-family: "Lato", cursive;
+}
+
+a {
+  color: #343078;
+  text-decoration: none;
+}
+
+.orangeText {
+  color: #F8B339;
+}
+
+.lightText {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 21;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 35px;
+  max-width: 1675px;
+}
+
+.logo {
+  font-family: "Oxygen", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+button {
+  border: 5px solid #F8B339;
+  text-transform: uppercase;
+  padding: 18px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: none;
+  color: #ffffff;
+  background: transparent;
+}
+
+button:hover {
+  border-radius: 20px;
+  background: #F8B339;
+}
+
+.firstScreen.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1370px;
+  pointer-events: none;
+  padding: 90px 30px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #ffffff;
+  max-width: 609px;
+  letter-spacing: 0;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 43px;
+  color: #ffffff;
+  margin: 14px 0 17px;
+  letter-spacing: 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 484px;
+  margin-bottom: 60px;
+}
+
+.elipse {
+  position: absolute;
+  top: -70%;
+  right: -40%;
+  z-index: -1;
+  width: 150%;
+}
+
+.swiper.swiper-fade.swiper-initialized.swiper-horizontal.mySwiper.swiper-backface-hidden {
+  position: relative;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  user-select: none;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+}
+
+.swiper-pagnation-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 53px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 46%;
+  left: 0;
+  display: flex;
+}
+
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal .swiper-pagination-current {
+  position: absolute;
+  right: 60px;
+  top: -40px;
+  font-size: 29.415px;
+  line-height: 41.34px;
+}
+
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal .swiper-pagination-total {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  font-size: 15.9px;
+  line-height: 22.26px;
+}
+
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal .swiper-pagination-divide {
+  position: absolute;
+  width: 45.315px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+  right: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

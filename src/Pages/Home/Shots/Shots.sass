@@ -1,0 +1,53 @@
+.shots
+  position: relative
+  overflow: hidden
+.shots .container
+  padding: 90px 30px
+.shotsLines
+  position: absolute
+  top: 0
+  z-index: -1
+.shots .top-row
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.shotsTextBg
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  width: 30%
+
+
+.shotsTextBg img
+  width: 140%
+.shots .bottom-row
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 150px 0 150px
+
+.bottom-row-card
+  padding: 0 48px 50px
+  filter: grayscale(100%)
+  transition: filter 2s ease-out
+  position: relative
+
+.bottom-row-card:hover
+  filter: grayscale(0%)
+.bottom-row-card img
+  width: 100%
+  border-radius: 10px
+
+.bottom-row-card-widget
+  position: absolute
+  bottom: 0
+  right: 2px
+
+
+.bottom-row-card-widget img
+  width: 64px
+.bottom-row-card-widget h4
+  @include Poppins()
+  @include text(30px,700,none,#ffffff)

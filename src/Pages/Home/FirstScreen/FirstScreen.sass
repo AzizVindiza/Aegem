@@ -1,0 +1,39 @@
+.firstScreen
+  position: relative
+  overflow: hidden
+  .container
+
+    padding: 90px 30px
+
+  &__row
+   display: flex
+   justify-content: space-between
+   align-items: center
+.links
+  margin-top: 60px
+  display: flex
+  justify-content: flex-end
+  column-gap: 20px
+  li
+    a
+      color: #ffffff
+h2
+  @include Poppins()
+  @include text(80px,700,90px,#ffffff)
+  max-width: 609px
+  letter-spacing: 0
+h3
+  @include text(30px,600,43px,#ffffff)
+  margin: 14px 0 17px
+  letter-spacing: 0
+
+p
+  @include text(16px,400,24px,#ffffff99)
+  max-width: 484px
+  margin-bottom: 60px
+.elipse
+  position: absolute
+  top: -60%
+  z-index: -1
+
+

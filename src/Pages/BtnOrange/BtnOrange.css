@@ -1,0 +1,23 @@
+/* Error: Module loop: this module is already being loaded.
+ *   ,--> BtnOrange.sass
+ * 1 | @use "../../style"
+ *   | ^^^^^^^^^^^^^^^^^^ new load
+ *   '
+ *   ,--> BtnOrange.sass
+ * 1 | @use "../../style"
+ *   | ================== original load
+ *   '
+ *   BtnOrange.sass 1:1     @import
+ *   ..\..\style.sass 52:9  @use
+ *   BtnOrange.sass 1:1     root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > BtnOrange.sass\a 1 \2502  @use "../../style"\d\a   \2502  ^^^^^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > BtnOrange.sass\a 1 \2502  @use "../../style"\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   BtnOrange.sass 1:1     @import\a   ..\\..\\style.sass 52:9  @use\a   BtnOrange.sass 1:1     root stylesheet';
+}

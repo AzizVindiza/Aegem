@@ -1,11 +1,19 @@
 import React from 'react';
-import './home.css'
+import FirstScreen from "./FirstScreen/FirstScreen";
+import Shots from "./Shots/Shots";
+import Videos from "./Videos/Videos";
+import Portfolio from "./Portfolio/Portfolio";
+import Subscription from "./Subscription/Subscription";
 
 const Home = () => {
     return (
-        <section className='home'>
-            Home
-        </section>
+        <>
+            <FirstScreen/>
+            <Shots/>
+            <Videos/>
+            <Portfolio/>
+            <Subscription/>
+        </>
     );
 };
 

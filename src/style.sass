@@ -1,48 +1,59 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-    resize: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  list-style-type: none
+  text-decoration: none
+  resize: none
 
-.container{
-    width: 100%;
-    margin: 0 auto;
-}
-a {
-    color: #343078;
-    text-decoration: none;
-}
-body{
-    background: #0f0f0f;
-    font-family: Lato,sans-serif;
-}
-.orangeText{
-    color: #F8B339;
-}
-.greyText{
-    color: #ffffff99;
-}
-.lightText{
-    color: #ffffffcc;
-}
-.Roboto400{
-    font-family: Roboto,sans-serif;
-    font-weight: 400;
-}
-.Roboto500{
-    font-family: Roboto,sans-serif;
-    font-weight: 500;
-}
-.Roboto600{
-    font-family: Roboto,sans-serif;
-    font-weight: 600;
-}
-.RobotoSlab500{
-    font-family: Roboto Slab, sans-serif;
-    font-weight: 400;
-}
+.container
+  width: 1440px
+  margin: 0 auto
+  max-width: 1370px
 
+body
+  background: #0f0f0f
+  font-family: "Lato", cursive
 
+a
+  color: #343078
+  text-decoration: none
+
+//Стили текста
+
+@mixin orangeText($weight: 400)
+  color: #F8B339
+  font-family: "Roboto", sans-serif
+  font-weight: $weight
+
+@mixin text($size,$weight,$height,$color)
+  font-size: $size
+  font-weight: $weight
+  line-height: $height
+  color: $color
+@mixin Roboto
+  font-family: "Roboto", sans-serif
+@mixin Poppins
+  font-family: "Poppins", sans-serif
+@mixin Oxygen
+  font-family: 'Oxygen', sans-serif
+.orangeText
+  color: #F8B339
+
+.lightText
+  color: #ffffffcc
+@import "Layout/Header/Header"
+@import "pages/BtnOrange/BtnOrange"
+@import "Pages/Home/FirstScreen/FirstScreen"
+@import "Pages/Home/FirstScreen/FirstSwiper/FirstSwiper"
+@import "Pages/Home/Shots/Shots"
+@import "Pages/Home/Shots/ShotsSwiper/ShotsSwiper"
+@import "Pages/Home/Videos/Videos"
+@import "Pages/Home/Portfolio/Portfolio"
+@import "Pages/Home/Portfolio/PortfolioCard/PortfolioCard"
+@import "Pages/Home/Subscription/Subscription"
+@import "Layout/Footer/Footer"
