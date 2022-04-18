@@ -1,7 +1,7 @@
 import React from 'react';
-const BtnOrange = ({text,submit}) => {
+const BtnOrange = ({text}) => {
     return (
-        <button>
+        <button className="btnOrange">
             {text}
         </button>
     );
