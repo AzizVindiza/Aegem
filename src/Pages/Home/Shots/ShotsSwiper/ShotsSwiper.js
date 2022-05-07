@@ -24,6 +24,7 @@ const ShotsSwiper = () => {
                 modules={[Navigation]}
                 navigation={true}
                 className="mySwiper"
+
             >
                 <SwiperSlide>
                     <img src={ShotSwiper1} alt=""/>

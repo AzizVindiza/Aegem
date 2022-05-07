@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
-
+import {motion} from "framer-motion";
 import HomeSwiper1 from './FirstSwiperImg1.jpg'
 import HomeSwiper2 from './FirstSwiperImg2.jpg'
 
@@ -32,6 +32,7 @@ const FirstSwiper = () => {
     };
     return (
         <Swiper
+
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
@@ -43,12 +44,19 @@ const FirstSwiper = () => {
             modules={[EffectFade,Autoplay, Pagination, Navigation]}
             className="mySwiper" effect="fade"
         >
-            <SwiperSlide>
-                <img src={HomeSwiper1} alt=""/>
-            </SwiperSlide>
-            <SwiperSlide>
-                <img src={HomeSwiper2} alt=""/>
-            </SwiperSlide>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}>
+
+                <SwiperSlide>
+                    <img src={HomeSwiper1} alt=""/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={HomeSwiper2} alt=""/>
+                </SwiperSlide>
+            </motion.div>
+
 
         </Swiper>
     );

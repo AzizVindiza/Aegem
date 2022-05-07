@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, {Suspense, useContext} from "react";
 import {Routes, Route} from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./Pages/Home/Home";
@@ -9,7 +9,9 @@ import PortfolioSection from "./Pages/PortfolioSection/PortfolioSection";
 import VideosSection from "./Pages/VideosSection/VideosSection";
 import BookNow from "./Pages/BookNow/BookNow";
 
+
 function App() {
+
   return (
       <Suspense fallback={'Loading...'}>
         <Routes>

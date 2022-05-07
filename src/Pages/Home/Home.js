@@ -4,6 +4,7 @@ import Shots from "./Shots/Shots";
 import Videos from "./Videos/Videos";
 import Portfolio from "./Portfolio/Portfolio";
 import Subscription from "./Subscription/Subscription";
+import {data} from "../../data";
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
             <FirstScreen/>
             <Shots/>
             <Videos/>
-            <Portfolio/>
+            <Portfolio data={data}/>
             <Subscription/>
         </>
     );

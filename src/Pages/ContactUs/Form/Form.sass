@@ -1,0 +1,37 @@
+.form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 540px
+  max-width: 540px
+  textarea
+    resize: vertical
+  input,textarea
+    width: 100%
+    border-radius: 5px
+    padding: 25px 50px 23px 28px
+    margin: 0 0 36px
+    background-color: #141414
+    @include text(20px,400,24px,#fff)
+    &::placeholder
+      color: #ffffff33
+  &__btn
+    display: flex
+    justify-content: flex-end
+    button
+      @include text(18px,500,none,#f8b339)
+      text-transform: capitalize
+      border-style: solid
+      border-width: 1px
+      border-color: #f8b339
+      border-radius: 28px
+      padding: 16px 47px 15px
+      transition: all ease-out .3s
+      background: transparent
+      &:hover
+        color: #fff
+        background: #f8b339
+        border-color: #fff
+
+
+

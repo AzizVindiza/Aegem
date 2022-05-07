@@ -2,6 +2,7 @@ import React from 'react';
 import BtnOrange from "../../BtnOrange/BtnOrange";
 import shotsLines from './shotsLines.svg'
 import ShotsSwiper from "./ShotsSwiper/ShotsSwiper";
+import {motion} from "framer-motion";
 import youtubeicon from './1.svg'
 import shooticon from './2.svg'
 import editicon from './icon3.svg'
@@ -15,7 +16,14 @@ const Shots = () => {
         <section className="shots">
             <div className="container">
                 <div className="top-row">
-                    <div className="text-block">
+                    <motion.div className="text-block"
+                                transition={{
+                                    ease: "easeOut",
+                                    duration: 2,
+                                }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 ,y:[100,0]}}
+                                viewport={{ once: true }}>
                         <h2>Best Shots</h2>
                         <p>I don’t rush, I don’t stylize, I just experience and grasp emotions which float in the air. I capture moments the way they come.</p>
                         <BtnOrange text="browse all images"/>
@@ -23,7 +31,7 @@ const Shots = () => {
                             <img src={shotsTextBg}  alt=""/>
                         </div>
 
-                    </div>
+                    </motion.div>
                     <ShotsSwiper/>
 
                 </div>
