@@ -16,13 +16,13 @@ const Form = () => {
 
         <form action="" onSubmit={handleSubmit(submitForm)} className="form">
             <label>
-                <input {...register("name")} type="text" placeholder="Your name"/>
+                <input {...register("name")} type="text" placeholder="Your name" required/>
             </label>
             <label>
-                <input {...register("email")} type="email" placeholder="Email"/>
+                <input {...register("email")} type="email" placeholder="Email" required/>
             </label>
             <label>
-                <input {...register("reason")} type="text" placeholder="Reason For Contact"/>
+                <input {...register("reason")} type="text" placeholder="Reason For Contact" required/>
             </label>
             <label>
                     <textarea {...register("message")} name="" id="" cols="40" rows="10" placeholder="Message">
@@ -30,7 +30,7 @@ const Form = () => {
                 </textarea>
             </label>
             <div className="form__btn">
-                <button type="submit">Send Message</button>
+                <button className='btnOrange' type="submit">Send Message</button>
             </div>
         </form>
 

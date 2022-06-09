@@ -1,11 +1,17 @@
 import React from 'react';
 import BtnOrange from "../../BtnOrange/BtnOrange";
 import videosPlayButton from './videosPlayBtn.svg'
+import {motion} from "framer-motion";
+
 const Videos = () => {
     return (
         <section className="videos">
             <div className="container">
-                <div className="videos__youtube">
+                <motion.div className="videos__youtube"
+                        initial={{ opacity: 0 ,y:100}}
+                        whileInView={{ opacity: 1, y:0 }}
+                        viewport={{ once: true, amount : 0.9 }}
+                >
                     <iframe className="elementor-video" frameBorder="0" allowFullScreen="1"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             title="YouTube video player" width="640" height="360"
@@ -14,12 +20,21 @@ const Videos = () => {
                     <div className="videos__btn">
                         <img src="./videosPlayBtn.svg" alt=""/>
                     </div>
-                </div>
-                <div className="videos__text">
+                </motion.div>
+                <motion.div className="videos__text"  animate={{y:[100,0]}}
+                        transition={{
+                            ease: "easeOut",
+                            duration: 4,
+
+                        }}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true,amount : 0.5 }}
+                >
                     <h2>Videos</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type&nbsp;</p>
                     <BtnOrange text='see more'/>
-                </div>
+                </motion.div>
             </div>
 
         </section>

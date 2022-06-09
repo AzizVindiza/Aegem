@@ -1,15 +1,32 @@
 import React from 'react';
 import SubscriptionImg from "./Subscription.jpg"
 import SubscriptionLines from "./SubscriptionLines.png"
+import {motion} from "framer-motion";
 
 const Subscription = () => {
     return (
         <section className="subscription">
             <div className="container">
-                <div className="subscription__img">
+                <motion.div className="subscription__img"    animate={{y:[100,0]}}
+                            transition={{
+                                ease: "easeOut",
+                                duration: 4,
+
+                            }}
+                            initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true ,amount :0.5}}>
                     <img src={SubscriptionImg} alt="" className="subscription__img-item"/>
-                </div>
-                <div className="subscription__text">
+                </motion.div>
+                <motion.div className="subscription__text"    animate={{y:[100,0]}}
+                            transition={{
+                                ease: "easeOut",
+                                duration: 4,
+
+                            }}
+                            initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true ,amount :1}}>
                     <h2>
                         Studio Magazine
                     </h2>
@@ -25,8 +42,16 @@ const Subscription = () => {
                         </label>
 
                     </form>
-                </div>
-                <img  className="subscription__lines" src={SubscriptionLines} alt=""/>
+                </motion.div>
+                <motion.img  className="subscription__lines" src={SubscriptionLines} alt=""    animate={{y:[100,0]}}
+                            transition={{
+                                ease: "easeOut",
+                                duration: 4,
+
+                            }}
+                            initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true ,amount :0.8}}/>
             </div>
             
         </section>

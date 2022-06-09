@@ -13,7 +13,9 @@ import shotsTextBg from './shotsText-blockBg.png'
 
 const Shots = () => {
     return (
-        <section className="shots">
+        <section className="shots"
+
+        >
             <div className="container">
                 <div className="top-row">
                     <motion.div className="text-block"
@@ -35,7 +37,17 @@ const Shots = () => {
                     <ShotsSwiper/>
 
                 </div>
-                <div className="bottom-row">
+                <motion.div className="bottom-row"
+                            animate={{y:[300,0]}}
+                            transition={{
+                                ease: "easeOut",
+                                duration: 4,
+
+                            }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true ,amount:0.2}}
+                >
                     <div className="bottom-row-card">
                         <div className='bottom-row-card-img'>
                             <img src={ShotsCardImg3} alt=""/>
@@ -65,7 +77,7 @@ const Shots = () => {
                         </div>
 
                     </div>
-                </div>
+                </motion.div>
             </div>
             <img className='shotsLines' src={shotsLines} alt=""/>
 

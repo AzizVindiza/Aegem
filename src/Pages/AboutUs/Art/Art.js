@@ -1,8 +1,21 @@
 import React from 'react';
 import ArtImg from './art.png'
+import {motion} from "framer-motion";
+
 const Art = () => {
     return (
-        <section className="art">
+        <motion.section className="art"
+                        animate={{y:[300,0]}}
+                        transition={{
+                            ease: "easeOut",
+                            duration: 4,
+
+                        }}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+        >
+
             <div className="container">
                 <div className="art__text">
                     <h2>Phlox Studio Art and Magazine</h2>
@@ -17,7 +30,7 @@ const Art = () => {
             </div>
 
 
-        </section>
+        </motion.section>
     );
 };
 

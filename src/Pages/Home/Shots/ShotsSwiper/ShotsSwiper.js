@@ -15,7 +15,6 @@ const ShotsSwiper = () => {
 
 
     return (
-
         <>
             <Swiper
                 slidesPerView={2}

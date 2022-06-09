@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from "../Form/Form";
-import Map from "../Map/Map";
+
 import {GrInstagram} from "react-icons/gr";
 import {FaWhatsapp} from "react-icons/fa";
 
@@ -20,7 +20,7 @@ const Contact = () => {
                     </div>
                     <div className="contact__info-item">
                         <h2>Email</h2>
-                        <a href="">aliya.e99@mail.ru</a>
+                        <a href="mailto:aliya.e99@mail.ru">aliya.e99@mail.ru</a>
                     </div>
                     <div className="contact__info-item">
                         <h2>Social Media</h2>

@@ -1,14 +1,21 @@
 import React,{useState,useContext} from 'react';
-
 import {AnimatePresence,motion} from "framer-motion";
-
-
 const Photos = ({data}) => {
 
 const [limit,setLimit]= useState(6)
     return(
         <>
-            <div className="photos">
+            <motion.div className="photos"
+                        animate={{y:[100,0]}}
+                        transition={{
+                            ease: "easeOut",
+                            duration: 4,
+
+                        }}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+            >
                 {
                 <AnimatePresence initial={false}  exitBeforeEnter>
                     {
@@ -41,8 +48,8 @@ const [limit,setLimit]= useState(6)
             }
 
 
-            </div>
-            <button type="button" onClick={()=>{
+            </motion.div>
+            <button className="btnOrange" type="button" onClick={()=>{
                 if (limit >=41 ){
                     setLimit(6)
                 }else{

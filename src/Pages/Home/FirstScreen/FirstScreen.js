@@ -5,7 +5,17 @@ import {motion} from "framer-motion";
 import elipse from './elipse.svg'
 const FirstScreen = () => {
     return (
-        <section className="firstScreen">
+        <motion.section
+            className="firstScreen"
+            animate={{y:[100,0]}}
+            transition={{
+                ease: "easeOut",
+                duration: 4,
+
+            }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}>
             <div className="container">
                 <div className="firstScreen__row">
                     <motion.div
@@ -35,7 +45,7 @@ const FirstScreen = () => {
                 </ul>
             </div>
             <img className='elipse' src={elipse} alt=""/>
-        </section>
+        </motion.section>
     );
 };
 

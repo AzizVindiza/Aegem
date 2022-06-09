@@ -6,11 +6,22 @@ import member from './member.jpg'
 import member1 from './member1.jpg'
 import member2 from './member2.jpg'
 import member3 from './member3.jpg'
+import {motion} from "framer-motion";
 const Studio = () => {
     return (
         <section className="studio">
             <div className="container">
-                <div className="studio__top">
+                <motion.div className="studio__top"
+                 animate={{y:[300,0]}}
+                       transition={{
+                           ease: "easeOut",
+                           duration: 4,
+
+                       }}
+                       initial={{ opacity: 0 }}
+                       whileInView={{ opacity: 1 }}
+                       viewport={{ once: true }}
+                >
                     <div className="studio__text">
                         <h2>
                             Aegem Photography Studio
@@ -28,8 +39,18 @@ const Studio = () => {
                     <div className="studio__img">
                         <img src={studioImg} alt=""/>
                     </div>
-                </div>
-                <div className="studio__bottom">
+                </motion.div >
+                <motion.div className="studio__bottom"
+                 animate={{y:[300,0]}}
+                       transition={{
+                           ease: "easeOut",
+                           duration: 4,
+
+                       }}
+                       initial={{ opacity: 0 }}
+                       whileInView={{ opacity: 1 }}
+                       viewport={{ once: true }}
+                >
                     <h2>Aegem team</h2>
                     <div className="studio__members">
                         <div className="studio__members-card">
@@ -63,7 +84,7 @@ const Studio = () => {
 
 
                     </div>
-                </div>
+                </motion.div >
                 <img src={studioLines} className="studio__lines" alt=""/>
                 <img src={studioLines2} className="studio__lines2" alt=""/>
             </div>
