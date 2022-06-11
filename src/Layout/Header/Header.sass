@@ -4,6 +4,13 @@
   left: 0
   right: 0
   z-index: 21
+
+  &__toggle
+    border: 5px solid #fff
+
+  &__offcanvas
+    background: #ffffff
+    @include text(20px,700,22px,#000)
   &__logo
     @include Oxygen()
     display: flex
@@ -23,9 +30,13 @@
     display: flex
     column-gap: 40px
     align-items: center
+    row-gap: 40px
     &-item
       @include text(18px,400,22px,#fff)
       @include Oxygen()
       transition: all 0.5s ease-out
       &:hover
         color: #F8B339
+.offcanvas-end
+  border-left: none
+  background: #272727
