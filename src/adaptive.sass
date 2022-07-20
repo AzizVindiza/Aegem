@@ -1,0 +1,37 @@
+@media (min-width: 576px)
+
+@media (min-width: 768px)
+  .firstScreen__row .text-block
+    padding-top: 0
+
+@media (min-width: 992px)
+  h2
+    @include Poppins()
+    @include text(5.208vw, 700, 5.859vw, #ffffff)
+    max-width: 609px / 1440px * 100%
+    letter-spacing: 0
+  h3
+    @include text(1.95vw, 600, 2.79vw, #ffffff)
+    margin: 14px / 1440px * 100% 0 17px / 1440px * 100%
+    letter-spacing: 0
+
+  p
+    @include text(1.04vw, 400, 1.56vw, #ffffff99)
+    max-width: 484px / 642px * 100%
+    margin-bottom: 60px / 1440px * 100%
+
+  .elipse
+    display: inline-block
+    position: absolute
+    top: -90%
+    right: -70%
+    z-index: -1
+    width: 200%
+
+  .firstScreen__row
+    .swiper.swiper-fade.swiper-initialized.swiper-horizontal.mySwiper.swiper-backface-hidden
+      height: 100vh
+
+@media (min-width: 1200px)
+
+@media (min-width: 1400px)

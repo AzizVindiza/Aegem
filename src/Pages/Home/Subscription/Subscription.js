@@ -7,7 +7,7 @@ const Subscription = () => {
     return (
         <section className="subscription">
             <div className="container">
-                <motion.div className="subscription__img"    animate={{y:[100,0]}}
+                <motion.div className="subscription__img col-6"    animate={{y:[100,0]}}
                             transition={{
                                 ease: "easeOut",
                                 duration: 4,
@@ -18,7 +18,7 @@ const Subscription = () => {
                         viewport={{ once: true ,amount :0.5}}>
                     <img src={SubscriptionImg} alt="" className="subscription__img-item"/>
                 </motion.div>
-                <motion.div className="subscription__text"    animate={{y:[100,0]}}
+                <motion.div className="subscription__text col-6"    animate={{y:[100,0]}}
                             transition={{
                                 ease: "easeOut",
                                 duration: 4,
@@ -51,7 +51,7 @@ const Subscription = () => {
                             }}
                             initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true ,amount :0.8}}/>
+                        viewport={{ once: true ,amount :0.8 }}/>
             </div>
             
         </section>

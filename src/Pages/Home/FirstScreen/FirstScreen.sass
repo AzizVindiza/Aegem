@@ -3,37 +3,33 @@
   overflow: hidden
   .container
 
-    padding: 90px 30px
+    padding: 90px / 1440px * 100% 30px / 1440px * 100%
 
   &__row
    display: flex
+   flex-wrap: wrap
    justify-content: space-between
    align-items: center
 .links
-  margin-top: 60px
+  margin-top: 60px / 1440px * 100%
   display: flex
   justify-content: flex-end
-  column-gap: 20px
+  column-gap: 20px / 1440px * 100%
   li
     a
       color: #ffffff
-h2
-  @include Poppins()
-  @include text(80px,700,90px,#ffffff)
-  max-width: 609px
-  letter-spacing: 0
-h3
-  @include text(30px,600,43px,#ffffff)
-  margin: 14px 0 17px
-  letter-spacing: 0
 
-p
-  @include text(16px,400,24px,#ffffff99)
-  max-width: 484px
-  margin-bottom: 60px
 .elipse
-  position: absolute
-  top: -60%
-  z-index: -1
+  display: none
+.firstScreen__row .text-block
+  padding-top: 50px
+@media (min-width: 992px )
+ .elipse
+   display: inline-block
+   position: absolute
+   top: -90%
+   right: -70%
+   z-index: -1
+   width: 200%
 
 

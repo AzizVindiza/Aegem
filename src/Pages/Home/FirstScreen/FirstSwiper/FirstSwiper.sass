@@ -1,6 +1,6 @@
 .swiper.swiper-fade.swiper-initialized.swiper-horizontal.mySwiper.swiper-backface-hidden
   position: relative
-  height: 100vh
+  height: auto
   z-index: -2
   pointer-events: none
   user-select: none
@@ -70,4 +70,6 @@
   transform: rotate(-45deg)
   right: 30px
 
-
+@media (min-width: 992px )
+  .swiper.swiper-fade.swiper-initialized.swiper-horizontal.mySwiper.swiper-backface-hidden
+    height: 100vh

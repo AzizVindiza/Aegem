@@ -7,6 +7,7 @@ const Videos = () => {
     return (
         <section className="videos">
             <div className="container">
+
                 <motion.div className="videos__youtube"
                         initial={{ opacity: 0 ,y:100}}
                         whileInView={{ opacity: 1, y:0 }}
@@ -14,7 +15,7 @@ const Videos = () => {
                 >
                     <iframe className="elementor-video" frameBorder="0" allowFullScreen="1"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            title="YouTube video player" width="640" height="360"
+                            title="YouTube video player"
                             src="https://www.youtube.com/embed/XHOmBV4js_E?controls=0&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fdemo.phlox.pro&amp;widgetid=1"
                             id="widget2"></iframe>
                     <div className="videos__btn">

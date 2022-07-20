@@ -16,7 +16,8 @@ const Header = () => {
                 <Navbar key={expand} expand={expand} className="mb-3 header">
                     <Container fluid>
                         <div className="header__logo">
-                            <img src={logo} alt=""/>
+                            <NavLink to=""> <img src={logo} alt=""/></NavLink>
+
                             <h1><NavLink className="header__title" to="">Aegem Studio</NavLink></h1>
                         </div>
                         <Navbar.Toggle className='bg-light' aria-controls={`offcanvasNavbar-expand-${expand}`} />

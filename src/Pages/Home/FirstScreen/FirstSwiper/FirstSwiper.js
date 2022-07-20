@@ -42,7 +42,8 @@ const FirstSwiper = () => {
             pagination={pagination}
             navigation={false}
             modules={[EffectFade,Autoplay, Pagination, Navigation]}
-            className="mySwiper" effect="fade"
+            className="mySwiper col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" effect="fade"
+
         >
             <motion.div
                 initial={{ opacity: 0 }}

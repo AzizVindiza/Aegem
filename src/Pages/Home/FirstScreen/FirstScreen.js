@@ -17,9 +17,9 @@ const FirstScreen = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}>
             <div className="container">
-                <div className="firstScreen__row">
+                <div className="firstScreen__row row tex">
                     <motion.div
-                        className="text-block"
+                        className="text-block text-center text-md-start d-flex d-md-block flex-column align-items-center col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6"
                         animate={{y:[100,0]}}
                         transition={{
                             ease: "easeOut",

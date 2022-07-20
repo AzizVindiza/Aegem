@@ -13,13 +13,10 @@
 input
   outline: none
   border: none
+
 textarea
   outline: none
   border: none
-.container
-  width: 1440px
-  margin: 0 auto
-  max-width: 1370px
 
 body
   background: #0f0f0f
@@ -41,21 +38,43 @@ a
   font-weight: $weight
   line-height: $height
   color: $color
+
 @mixin Roboto
   font-family: "Roboto", sans-serif
+
 @mixin Poppins
   font-family: "Poppins", sans-serif
+
 @mixin Oxygen
   font-family: 'Oxygen', sans-serif
+
 .orangeText
   color: #F8B339
 
 .lightText
   color: #ffffffcc
+
 h4
-  @include text(30px,700,43px,#fff)
+  @include text(30px, 700, 43px, #fff)
+
 h5
-  @include text(18px,500,25px,#fff)
+  @include text(18px, 500, 25px, #fff)
+
+h2
+  @include Poppins()
+  @include text(17px, 700, 19px, #ffffff)
+  max-width: 609px / 1440px * 100%
+  letter-spacing: 0
+
+h3
+  @include text(19px, 600, 20px, #ffffff)
+  margin: 14px / 1440px * 100% 0 17px / 1440px * 100%
+  letter-spacing: 0
+
+p
+  @include text(15px, 400, 18px, #ffffff99)
+  max-width: 484px / 642px * 100%
+  margin-bottom: 60px / 1440px * 100%
 @import "Layout/Header/Header"
 @import "pages/BtnOrange/BtnOrange"
 @import "Pages/Home/FirstScreen/FirstScreen"
@@ -73,4 +92,6 @@ h5
 @import "Pages/ContactUs/FirstSection/FirstSection"
 @import "Pages/ContactUs/Form/Form"
 @import "Pages/ContactUs/Contact/Contact"
+@import "adaptive"
+@import "Pages/Home/Price/Price"
 
